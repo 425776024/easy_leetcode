@@ -1,12 +1,10 @@
-
-
 class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
 
 
-def make_list(arr: list):
+def make_list(arr):
     head_node = None
     p_node = None
     for a in arr:
@@ -20,34 +18,37 @@ def make_list(arr: list):
     return head_node
 
 
-def print_list(head: ListNode):
+def print_list(head):
     while head is not None:
         print(head.val, end=',')
         head = head.next
 
 
 class Solution:
-    def two_list_sum(self, head1: ListNode, head2: ListNode):
+    def two_list_sum(self, head1, head2):
         p = 0
         sumlist = ListNode(0)
         pre = sumlist
         # 长度可能不一样，只要有一个有值，就得继续
         while head1 is not None or head2 is not None:
-            # 分3种情况讨论
+            # 分3种情况讨论，1:都还有的时候
             if head1 is not None and head2 is not None:
                 v = head1.val + head2.val + p
                 head1 = head1.next
                 head2 = head2.next
+        # 2: 前者有，后者没有
             elif head1 is not None and head2 is None:
                 v = head1.val + p
                 head1 = head1.next
-            else:
+            else: # 3，后者有
                 v = head2.val + p
                 head2 = head2.next
+            # 进位情况
             p = 0
             if v > 9:
                 v = v - 10
                 p = 1
+            # 当前点值超过9进位，个位赋给v，进位到中p
             node = ListNode(v)
             pre.next = node
             pre = node

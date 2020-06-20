@@ -24,7 +24,7 @@ class Solution(object):
 def run():
     s = Solution()
     print(s.twoSum2([3, 2, 4], 6))
-    print('hello7')
+    print('hello')
 
 
 if __name__ == '__main__':

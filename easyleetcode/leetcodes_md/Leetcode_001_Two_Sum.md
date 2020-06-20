@@ -21,10 +21,9 @@ Either of the following solutions are acceptable:
 O(n) Space, O(nlogn) Time
 O(n) Space, O(n) Time
 
-
-找出数组中和为某个数的两个数的序号
-思路：和为k等价与k-a=b，建立字典，遍历每个元素ai
-如果k-ai不存在字典中就记下ai的位置i来，到下一个数如果k-aj=ai在字典中，那么结果就是(i,j)
-
 ```
 
+找出数组中和为某个数的两个数的序号
+- 思路1: 对数组排序后，用前后指针，逼近目标值target
+- 思路2：和为k等价与k-a=b，建立字典，遍历每个元素ai
+如果k-ai不存在字典中就记下ai的位置i来，到下一个数如果k-aj=ai在字典中，那么结果就是(i,j)

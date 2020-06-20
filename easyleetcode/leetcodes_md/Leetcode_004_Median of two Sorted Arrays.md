@@ -1,5 +1,7 @@
 # Leetcode_004_Median of two Sorted Arrays
 
+---
+
 ```
 There are two sorted arrays A and B of size m and n respectively. Find the median of the two sorted arrays.
 
@@ -12,3 +14,9 @@ Challenge
 The overall run time complexity should be O(log (m+n)).
 
 ```
+
+---
+
+'''
+合并两个排序数组，然后取中位数
+'''
