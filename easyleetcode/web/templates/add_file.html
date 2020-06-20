@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Code</title>
+    <script src="/static/vue.min.js"></script>
+    <script src="/static/axios_min.js"></script>
+    <style>
+         button{
+            background-color: #F8F8F8;
+            min-height: 40px;
+            min-width: 60px;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1 align="center"> {[message]} </h1>
+<div align="center">
+    <button><a href="/" target="_blank">Home</a></button>
+    <button><a href="/view" target="_blank">View</a></button>
+    <button><a href="/addview" target="_blank"> Add</a></button>
+    <button><a href="/help" target="_blank">Help</a></button>
+</div>
+<h6></h6>
+<div id="code" align="center">
+    <h3>recom :From_+_+number+_+name</h3>
+    <h3>like :Leetcode_001_Two_Sum</h3>
+    <input style="width:30%;height:50px;" id='maxarea' v-model="code_name" spellcheck="false"></input>
+    <br/>
+    <button @click="save_func()">Save Code</button>
+</div>
+
+
+<script type="text/javascript">
+
+var code = new Vue({
+        el: '#code',
+        data:{
+            code_name: "your code name",
+        },
+        methods: {
+            save_func:function(){
+                axios.put('/add', {
+                    "name":this.code_name,
+                  })
+                  .then(function (response) {
+                    host = window.location.host;
+                    url='http://'+host+'/code/'+response.data['name'];
+                    window.open(url);
+                  })
+                  .catch(function (error) {
+                    console.log(error);
+                  });
+            }
+        }
+});
+
+
+</script>
+
+</body>
+
+</html>

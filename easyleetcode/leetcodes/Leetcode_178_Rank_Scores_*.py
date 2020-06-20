@@ -1,0 +1,1 @@
+print('Leetcode_178_Rank_Scores_*')

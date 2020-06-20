@@ -1,0 +1,1 @@
+print('Leetcode_494_Target_Sum')

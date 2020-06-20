@@ -1,0 +1,1 @@
+print('Leetcode_531_Lonely_Pixel_I')

@@ -1,0 +1,1 @@
+# Leetcode_481_Magical_String

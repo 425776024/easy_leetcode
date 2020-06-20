@@ -1,0 +1,5 @@
+uvicorn
+fastapi
+pydantic
+aiofiles
+jinja2

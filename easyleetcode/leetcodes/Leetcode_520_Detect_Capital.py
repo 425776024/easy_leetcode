@@ -1,0 +1,1 @@
+print('Leetcode_520_Detect_Capital')
