@@ -39,7 +39,6 @@ or use it, from source code : **clone source** then:
 ---
 
 ## index view
-![](imgs/index.png)
 ![](https://img-blog.csdnimg.cn/20200620202301906.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ppYW5nNDI1Nzc2MDI0,size_16,color_FFFFFF,t_70)
 
 
