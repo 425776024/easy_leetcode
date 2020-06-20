@@ -1,1 +1,0 @@
-# SYL_2整型数组_4product of arr exclude itself

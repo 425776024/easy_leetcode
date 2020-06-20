@@ -1,1 +1,0 @@
-print('SYL_2整型数组_5partition array划分数组')
