@@ -1,4 +1,4 @@
-# Leetcode_172_Factorial Trailing Zeroes
+# Leetcode 172 Factorial Trailing Zeroes
 
 ---
 

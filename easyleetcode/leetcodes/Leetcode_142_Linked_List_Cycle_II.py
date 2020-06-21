@@ -1,11 +1,10 @@
-
 class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
 
 
-def make_list(arr: list):
+def make_list(arr):
     head_node = None
     p_node = None
     for a in arr:
@@ -19,14 +18,14 @@ def make_list(arr: list):
     return head_node
 
 
-def print_list(head: ListNode):
+def print_list(head):
     while head is not None:
         print(head.val, end=',')
         head = head.next
 
 
 class Solution:
-    def detectCycle(self, head: ListNode):
+    def detectCycle(self, head):
         slow = head
         fast = head
         # 无环，迟早退出

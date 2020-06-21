@@ -1,4 +1,4 @@
-# SYL_4数学和位运算_8Update Bits
+# SYL 4数学和位运算 8Update Bits
 
 ---
 
@@ -22,6 +22,13 @@ Minimum number of operations?
 
 
 ```
+i=2,j=4 >>>
+
+> 1024:0b1000`00000`00
+> 
+> 21:0b`10101`
+> 
+> 0b1000`10101`00
 
 
 ---

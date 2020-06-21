@@ -1,11 +1,10 @@
-
 class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
 
 
-def make_list(arr: list):
+def make_list(arr):
     head_node = None
     p_node = None
     for a in arr:
@@ -19,7 +18,7 @@ def make_list(arr: list):
     return head_node
 
 
-def print_list(head: ListNode):
+def print_list(head):
     while head is not None:
         print(head.val, end=',')
         head = head.next
@@ -60,13 +59,17 @@ class Solution:
         return head
 
 
-# 题解2 - 2个for
+
 s = Solution()
 a = [12, 11, 12, 21, 41, 43, 21]
 head = make_list(a)
 print_list(head)
+
+# 题解1 - 2个for
 # head = s.deleteDuplicates(head)
+
+# 题解2 - 万能的 hashtable
 head = s.deleteDuplicates_hash(head)
 print()
 print_list(head)
-# 题解2 - 万能的 hashtable
+
