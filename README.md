@@ -3,6 +3,7 @@
 - A simple Python leetcode study and running online tool
 - Just need your computer to run the python environment
 
+use it, from web, just browser(No save code and take markdown function):[https://425776024.github.io/](https://425776024.github.io/)
 
 use it, from pip：`pip install easyleetcode`
 
@@ -14,7 +15,7 @@ run()
 # or run(host="127.0.0.1", port=8080)
 ```
 
-or use it, from source code : **clone source** then:
+use it, from source code : **clone source** then:
 - 1.pip install these package >> `['uvicorn', 'fastapi', 'pydantic', 'aiofiles', 'jinja2']`
 - 2.run python script : `easyleetcode/web/main.py`
 
