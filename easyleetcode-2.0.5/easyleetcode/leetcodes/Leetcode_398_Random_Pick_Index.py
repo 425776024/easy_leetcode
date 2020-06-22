@@ -1,0 +1,1 @@
+print('Leetcode_398_Random_Pick_Index')

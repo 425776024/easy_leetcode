@@ -1,0 +1,1 @@
+print('Leetcode_244_Shortest_Word_Distance_II_$')

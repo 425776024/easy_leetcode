@@ -1,0 +1,1 @@
+print('Leetcode_420_Strong_Password_Checker')

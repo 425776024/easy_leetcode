@@ -1,0 +1,1 @@
+print('Leetcode_507_Perfect_Number')

@@ -1,0 +1,1 @@
+print('Leetcode_315_Count_of_Smaller_Numbers_After_Self')

@@ -1,0 +1,1 @@
+print('Leetcode_535_Encode_and_Decode_TinyURL')

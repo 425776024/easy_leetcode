@@ -1,0 +1,1 @@
+print('Leetcode_051_N-Queens')
