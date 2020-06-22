@@ -1,1 +1,0 @@
-print('Leetcode_131_Palindrome_Partitioning')

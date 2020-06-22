@@ -1,1 +1,0 @@
-print('Leetcode_413_Arithmetic_Slices')

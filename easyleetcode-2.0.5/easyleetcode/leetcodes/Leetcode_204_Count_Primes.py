@@ -1,1 +1,0 @@
-print('Leetcode_204_Count_Primes')

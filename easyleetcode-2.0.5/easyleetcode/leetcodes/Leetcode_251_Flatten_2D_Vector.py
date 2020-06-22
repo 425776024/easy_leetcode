@@ -1,1 +1,0 @@
-print('Leetcode_251_Flatten_2D_Vector')

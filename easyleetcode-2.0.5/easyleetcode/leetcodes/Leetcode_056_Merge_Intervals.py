@@ -1,1 +1,0 @@
-print('Leetcode_056_Merge_Intervals')

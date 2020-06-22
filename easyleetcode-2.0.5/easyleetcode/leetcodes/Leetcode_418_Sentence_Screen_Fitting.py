@@ -1,1 +1,0 @@
-print('Leetcode_418_Sentence_Screen_Fitting')

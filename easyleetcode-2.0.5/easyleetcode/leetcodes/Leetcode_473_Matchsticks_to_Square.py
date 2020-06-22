@@ -1,1 +1,0 @@
-print('Leetcode_473_Matchsticks_to_Square')

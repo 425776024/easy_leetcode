@@ -1,1 +1,0 @@
-print('Leetcode_440_K-th_Smallest_in_Lexicographical_Order')

@@ -1,1 +1,0 @@
-print('Leetcode_362_Design_Hit_Counter')

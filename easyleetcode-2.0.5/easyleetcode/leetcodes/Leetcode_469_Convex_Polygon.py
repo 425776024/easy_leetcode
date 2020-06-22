@@ -1,1 +1,0 @@
-print('Leetcode_469_Convex_Polygon')

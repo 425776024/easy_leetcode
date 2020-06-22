@@ -1,1 +1,0 @@
-print('Leetcode_120_Triangle')

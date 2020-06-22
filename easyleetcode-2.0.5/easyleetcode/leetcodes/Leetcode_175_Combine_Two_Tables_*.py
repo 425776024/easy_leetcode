@@ -1,1 +1,0 @@
-print('Leetcode_175_Combine_Two_Tables_*')

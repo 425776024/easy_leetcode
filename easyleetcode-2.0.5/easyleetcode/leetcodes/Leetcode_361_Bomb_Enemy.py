@@ -1,1 +1,0 @@
-print('Leetcode_361_Bomb_Enemy')

@@ -1,1 +1,0 @@
-print('Leetcode_181_Employees_Earning_More_Than_Their_Managers_*')

@@ -1,1 +1,0 @@
-print('Leetcode_355_Design_Twitter')

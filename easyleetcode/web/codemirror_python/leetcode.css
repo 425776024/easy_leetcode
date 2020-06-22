@@ -1,0 +1,82 @@
+.cm-s-leetcode.CodeMirror { color: #000000; background: #FFFFFF; }
+.cm-s-leetcode span.cm-meta {color: rgb(7, 32, 170);}
+.cm-s-leetcode span.cm-keyword { color: rgb(16, 51, 246); }
+.cm-s-leetcode span.cm-atom {color: rgb(88, 92, 246);}
+.cm-s-leetcode span.cm-number {color: rgb(11, 41, 206);}
+.cm-s-leetcode span.cm-def {color: rgb(16, 51, 246);}
+.cm-s-leetcode span.cm-variable {color: black;}
+.cm-s-leetcode span.cm-variable-2 {color: rgb(85, 148, 164);}
+.cm-s-leetcode span.cm-variable-3 {color: rgb(16, 51, 246);}
+.cm-s-leetcode span.cm-property {color: black;}
+.cm-s-leetcode span.cm-operator {color: rgb(16, 51, 246);}
+.cm-s-leetcode span.cm-comment {color: rgb(51, 126, 247);}
+.cm-s-leetcode span.cm-string {color: rgb(49, 120, 33);}
+.cm-s-leetcode span.cm-string-2 {color: rgb(193, 52, 32);}
+.cm-s-leetcode span.cm-error {color: #F00;}
+.cm-s-leetcode span.cm-qualifier {color: #555;}
+
+.CodeMirror-gutters{
+    border-right-color: #eeeeee;
+    background: #fff;
+}
+
+.CodeMirror{
+    font-family: 'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro',monospace;
+    float:center;
+            spellcheck:false;
+            min-height: 600px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 3px;
+            outline: 0;
+            border: 1px solid #a0b3d6;
+            font-size: 15px;
+            line-height: 24px;
+            word-wrap: break-word;
+            overflow-x: hidden;
+            overflow-y: auto;
+            border-color: rgba(82, 168, 236, 0.8);
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+#test{
+    background-color: #F8F8F8;
+    height: 40px;
+    width: 10%;
+}
+
+#output{
+    float:center;
+    text-align:left;
+    line-height: 24px;
+    word-wrap: break-word;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-color: rgba(82, 168, 236, 0.8);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+    spellcheck:false;
+    border: 1px solid #a0b3d6;
+    align:center;
+    width: 80%;
+    min-height: 100px;
+}
+
+.clearfix{
+        float:center
+    }
+#show-area {
+        width: 80%;
+        height: auto;
+        word-wrap: break-word;
+            overflow-x: hidden;
+            overflow-y: auto;
+            border-color: rgba(82, 168, 236, 0.8);
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+button{
+    background-color: #F8F8F8;
+    height: 40px;
+    width: 10%;
+}

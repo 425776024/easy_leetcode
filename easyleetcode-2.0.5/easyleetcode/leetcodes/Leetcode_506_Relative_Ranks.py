@@ -1,1 +1,0 @@
-print('Leetcode_506_Relative_Ranks')

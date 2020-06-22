@@ -1,1 +1,0 @@
-print('Leetcode_425_Word_Squares')

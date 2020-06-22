@@ -1,1 +1,0 @@
-print('Leetcode_197_Rising_Temperature')

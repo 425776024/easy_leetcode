@@ -1,1 +1,0 @@
-print('Leetcode_277_Find_the_Celebrity')

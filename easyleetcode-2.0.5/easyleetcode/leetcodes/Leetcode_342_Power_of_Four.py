@@ -1,1 +1,0 @@
-print('Leetcode_342_Power_of_Four')

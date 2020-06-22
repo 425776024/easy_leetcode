@@ -1,1 +1,0 @@
-print('Leetcode_295_Find_Median_from_Data_Stream')

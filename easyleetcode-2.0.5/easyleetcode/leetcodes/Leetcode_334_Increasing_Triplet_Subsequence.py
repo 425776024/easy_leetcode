@@ -1,1 +1,0 @@
-print('Leetcode_334_Increasing_Triplet_Subsequence')

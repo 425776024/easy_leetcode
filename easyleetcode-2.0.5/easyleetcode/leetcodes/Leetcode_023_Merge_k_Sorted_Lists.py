@@ -1,1 +1,0 @@
-print('Leetcode_023_Merge_k_Sorted_Lists')

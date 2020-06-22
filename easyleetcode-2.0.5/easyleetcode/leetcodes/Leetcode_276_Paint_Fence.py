@@ -1,1 +1,0 @@
-print('Leetcode_276_Paint_Fence')

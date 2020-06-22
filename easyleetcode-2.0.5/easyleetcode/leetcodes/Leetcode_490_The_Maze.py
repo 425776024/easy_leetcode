@@ -1,1 +1,0 @@
-print('Leetcode_490_The_Maze')

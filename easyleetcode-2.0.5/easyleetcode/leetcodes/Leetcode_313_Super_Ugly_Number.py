@@ -1,1 +1,0 @@
-print('Leetcode_313_Super_Ugly_Number')

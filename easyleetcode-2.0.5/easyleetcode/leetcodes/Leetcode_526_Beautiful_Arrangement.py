@@ -1,1 +1,0 @@
-print('Leetcode_526_Beautiful_Arrangement')

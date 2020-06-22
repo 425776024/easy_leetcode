@@ -1,1 +1,0 @@
-print('Leetcode_483_Smallest_Good_Base')

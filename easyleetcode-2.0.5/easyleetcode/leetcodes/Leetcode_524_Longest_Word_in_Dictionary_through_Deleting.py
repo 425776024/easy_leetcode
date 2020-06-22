@@ -1,1 +1,0 @@
-print('Leetcode_524_Longest_Word_in_Dictionary_through_Deleting')
