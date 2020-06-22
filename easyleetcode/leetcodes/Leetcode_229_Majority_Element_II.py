@@ -1,4 +1,3 @@
-
 class Solution:
     def majorityElement(self, nums):
         res = []
@@ -12,6 +11,7 @@ class Solution:
             if cnt1 == 0:
                 a = num
                 cnt1 = 1
+			# 这步关键，得a不匹配中num，且cnt2没有记录的时候
             elif cnt2 == 0 and a != num:
                 b = num
                 cnt2 = 1
