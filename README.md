@@ -3,9 +3,8 @@
 - A simple Python leetcode study and running online tool
 - Just need your computer to run the python environment
 
-use it, from web, just browser(No save code and take markdown function)（国内更快）:[https://pyleetcode.gitee.io/](https://pyleetcode.gitee.io/)
+use it, from web, just browser(No save code and take markdown function) :[https://pyleetcode.gitee.io/](https://pyleetcode.gitee.io/)
 
-use it, from web, just browser(No save code and take markdown function):[https://425776024.github.io/](https://425776024.github.io/)
 
 use it, from pip：`pip install easyleetcode`
 
