@@ -36,11 +36,11 @@ class Solution:
                 v = head1.val + head2.val + p
                 head1 = head1.next
                 head2 = head2.next
-        # 2: 前者有，后者没有
+            # 2: 前者有，后者没有
             elif head1 is not None and head2 is None:
                 v = head1.val + p
                 head1 = head1.next
-            else: # 3，后者有
+            else:  # 3，后者有
                 v = head2.val + p
                 head2 = head2.next
             # 进位情况
