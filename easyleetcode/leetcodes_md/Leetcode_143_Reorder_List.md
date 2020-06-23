@@ -3,58 +3,17 @@
 --- 
  
 ``` 
-# Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
+Given a singly linked list L: L0→L1→…→L__n-1→Ln,
+reorder it to: L0→L__n_→L1→_L__n-1→L2→L__n-2→…
 
-class Solution(object):
-    # def reorderList(self, head):
-    #     """
-    #     :type head: ListNode
-    #     :rtype: void Do not return anything, modify head in-place instead.
-    #     """
-    #     # List as index to rebuild relation
-    #     if not head:
-    #         return
-    #     dmap = []
-    #     current = head
-    #     while current is not None:
-    #         dmap.append(current)
-    #         current = current.next
-    #     ls = len(dmap)
-    #     for i in range(ls / 2):
-    #         t = -1 * (i + 1)
-    #         dmap[t].next = dmap[i].next
-    #         dmap[i].next = dmap[t]
-    #     dmap[ls / 2].next = None
+You must do this in-place without altering the nodes' values.
 
-    def reorderList(self, head):
-        # Two points
-        if head is None or head.next is None:
-            return
-        p1, p2 = head, head.next
-        while p2 and p2.next:
-            p1 = p1.next
-            p2 = p2.next.next
-        head2 = p1.next
-        p1.next = None
-        p2 = head2.next
-        head2.next = None
-        # reverse mid->end to end->mid
-        while p2:
-            temp = p2.next
-            p2.next = head2
-            head2 = p2
-            p2 = temp
-        p1, p2 = head, head2
-        # merge
-        while p1:
-            temp = p1.next
-            p1.next = p2
-            p1 = p1.next
-            p2 = temp
+For example,
+Given {1,2,3,4}, reorder it to {1,4,2,3}.
 
 
+这道链表重排序问题可以拆分为以下三个小问题：
+1. 使用快慢指针来找到链表的中点，并将链表从中点处断开，形成两个独立的链表。
+2. 将第二个链翻转。
+3. 将第二个链表的元素间隔地插入第一个链表中。
  ```

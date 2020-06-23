@@ -1,53 +1,74 @@
-# Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
+
+def make_list(arr):
+    head_node = None
+    p_node = None
+    for a in arr:
+        new_node = ListNode(a)
+        if head_node is None:
+            head_node = new_node
+            p_node = new_node
+        else:
+            p_node.next = new_node
+            p_node = new_node
+    return head_node
+
+
+def print_list(head):
+    while head is not None:
+        print(head.val, end=',')
+        head = head.next
+    print()
+
 
 class Solution(object):
-    # def reorderList(self, head):
-    #     """
-    #     :type head: ListNode
-    #     :rtype: void Do not return anything, modify head in-place instead.
-    #     """
-    #     # List as index to rebuild relation
-    #     if not head:
-    #         return
-    #     dmap = []
-    #     current = head
-    #     while current is not None:
-    #         dmap.append(current)
-    #         current = current.next
-    #     ls = len(dmap)
-    #     for i in range(ls / 2):
-    #         t = -1 * (i + 1)
-    #         dmap[t].next = dmap[i].next
-    #         dmap[i].next = dmap[t]
-    #     dmap[ls / 2].next = None
 
     def reorderList(self, head):
         # Two points
         if head is None or head.next is None:
             return
-        p1, p2 = head, head.next
-        while p2 and p2.next:
-            p1 = p1.next
-            p2 = p2.next.next
-        head2 = p1.next
-        p1.next = None
-        p2 = head2.next
-        head2.next = None
-        # reverse mid->end to end->mid
-        while p2:
-            temp = p2.next
-            p2.next = head2
-            head2 = p2
-            p2 = temp
-        p1, p2 = head, head2
-        # merge
-        while p1:
-            temp = p1.next
-            p1.next = p2
-            p1 = p1.next
-            p2 = temp
+        # 为了找到 中 节点
+        slow, fast = head, head.next
+        while fast and fast.next:
+            slow = slow.next
+            # two step
+            fast = fast.next.next
 
+        # 退出while，fast是最后一个节点，或者None,slow 到中间
+        last = slow.next
+        slow.next = None
+
+        # last的前方节点
+        last_pre = None
+        # reverse last:fast , 此后，从pre开始->next遍历，是从大到小
+        while last:
+            next = last.next
+            last.next = last_pre
+            last_pre = last
+            last = next
+        # 退出
+        pre = last_pre
+        # head开始next是从小到大
+        while head and pre:
+            # 从小到大的数据的下一个
+            head_next = head.next
+            # 从大到小的数据的下一个
+            pre_next = pre.next
+            # 从小到大的数据，和从大到小的数据，串起来
+            head.next = pre
+            pre.next = head_next
+            # 到他们下一个点
+            pre = pre_next
+            head = head_next
+
+
+a = [1, 2, 3, 4,5]
+head = make_list(a)
+s = Solution()
+print_list(head)
+s.reorderList(head)
+print_list(head)
