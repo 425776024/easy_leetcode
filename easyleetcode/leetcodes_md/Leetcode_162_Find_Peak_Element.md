@@ -1,5 +1,6 @@
 # L 162 Find Peak Element
- 
+
+[https://www.bilibili.com/video/BV1mg4y1B7KF](https://www.bilibili.com/video/BV1mg4y1B7KF)
 --- 
  
 ``` 

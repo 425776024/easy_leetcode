@@ -1,0 +1,1 @@
+print('Leetcode_825_Friends_Of_Appropriate_Ages')

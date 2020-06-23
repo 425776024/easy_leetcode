@@ -1,0 +1,1 @@
+print('Leetcode_721_Accounts_Merge')

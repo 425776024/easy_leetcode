@@ -28,27 +28,4 @@ class Solution(object):
             return
         nums[index1], nums[index2] = nums[index2], nums[index1]
 
-    # def nextPermutation(self, nums):
-    #     # https://leetcode.com/discuss/86630/fast-and-easy-python-solution-beaten-79%25
-    #     pos = -1
-    #     ls = len(nums)
-    #     for i in range(ls - 1, 0, -1):
-    #         if nums[i] > nums[i - 1]:
-    #             pos = i - 1
-    #             break
-    #     if pos == -1:
-    #         self.re_order(nums, 0, ls - 1)
-    #         return
-    #     for i in range(ls - 1, -1, -1):
-    #         if nums[pos] < nums[i]:
-    #             nums[pos], nums[i] = nums[i], nums[pos]
-    #             self.re_order(nums, pos + 1, ls - 1)
-    #             break
-    #
-    # def re_order(self, a, start, end):
-    #     for i in range(0, (end - start + 1) // 2):
-    #         a[start + i], a[end - i] = a[end - i], a[start + i]
-
-
-
-
+    

@@ -1,0 +1,1 @@
+print('Leetcode_1427_Perform_String_Shifts')

@@ -1,46 +1,5 @@
 class Solution(object):
-    # def addBinary(self, a, b):
-    #     """
-    #     :type a: str
-    #     :type b: str
-    #     :rtype: str
-    #     """
-    #     res = ''
-    #     lsa, lsb = len(a), len(b)
-    #     pos = -1
-    #     plus = 0
-    #     while (lsa + pos) >= 0 and (lsb + pos) >= 0:
-    #         curr = int(a[pos]) + int(b[pos]) + plus
-    #         if curr >= 2:
-    #             plus = 1
-    #             curr %= 2
-    #         else:
-    #             plus = 0
-    #         res = str(curr) + res
-    #         pos -= 1
-    #     if lsa + pos >= 0:
-    #         while (lsa + pos) >= 0:
-    #             curr = int(a[pos]) + plus
-    #             if curr >= 2:
-    #                 plus = 1
-    #                 curr %= 2
-    #             else:
-    #                 plus = 0
-    #             res = str(curr) + res
-    #             pos -= 1
-    #     if lsb + pos >= 0:
-    #         while (lsb + pos) >= 0:
-    #             curr = int(b[pos]) + plus
-    #             if curr >= 2:
-    #                 plus = 1
-    #                 curr %= 2
-    #             else:
-    #                 plus = 0
-    #             res = str(curr) + res
-    #             pos -= 1
-    #     if plus == 1:
-    #         res = '1' + res
-    #     return res
+ 
 
     def addBinary(self, a, b):
         res = ''

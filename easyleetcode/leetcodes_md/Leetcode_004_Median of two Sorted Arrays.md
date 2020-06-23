@@ -1,5 +1,7 @@
 # Leetcode_004_Median of two Sorted Arrays
 
+[https://www.bilibili.com/video/BV1Rp4y1S7u5](https://www.bilibili.com/video/BV1Rp4y1S7u5)
+
 ---
 
 ```

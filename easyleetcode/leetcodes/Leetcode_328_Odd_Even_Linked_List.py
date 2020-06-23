@@ -23,15 +23,3 @@ class Solution(object):
             even = even.next
         odd.next = even_head
         return head
-
-    # def oddEvenList(self, head):
-    #     # slicing
-    #     if (head != None):
-    #         x = []
-    #     else:
-    #         return []
-    #     while (head.next != None):
-    #         x.append(head.val)
-    #         head = head.next
-    #     x.append(head.val)
-    #     return x[0::2] + x[1::2]

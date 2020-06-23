@@ -1,5 +1,7 @@
 # L 137 Single Number II
- 
+
+[https://www.bilibili.com/video/BV1CA411t76K](https://www.bilibili.com/video/BV1CA411t76K)
+
 --- 
  
 ``` 

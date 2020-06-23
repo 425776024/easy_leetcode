@@ -1,14 +1,3 @@
 # L 344 Reverse String
  
---- 
- 
-``` 
-class Solution(object):
-    def reverseString(self, s):
-        """
-        :type s: str
-        :rtype: str
-        """
-        # slice
-        return s[::-1]
- ```
+[https://www.bilibili.com/video/BV1At4y1y7eu](https://www.bilibili.com/video/BV1At4y1y7eu)

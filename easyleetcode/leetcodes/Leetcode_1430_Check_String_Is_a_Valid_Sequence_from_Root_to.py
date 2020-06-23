@@ -1,0 +1,1 @@
+print('Leetcode_1430_Check_String_Is_a_Valid_Sequence_from_Root_to')

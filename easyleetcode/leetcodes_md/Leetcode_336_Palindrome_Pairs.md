@@ -1,5 +1,7 @@
 # L 336 Palindrome Pairs
- 
+
+[https://www.bilibili.com/video/BV1zT4y1J72z](https://www.bilibili.com/video/BV1zT4y1J72z)
+
 --- 
  
 ``` 

@@ -1,5 +1,7 @@
 # L 021 Merge Two Sorted Lists
- 
+
+[https://www.bilibili.com/video/BV1Ct4y117Ua](https://www.bilibili.com/video/BV1Ct4y117Ua)
+
 --- 
  
 ``` 

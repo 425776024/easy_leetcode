@@ -1,0 +1,1 @@
+print('Leetcode_1046_Last_Stone_Weight')

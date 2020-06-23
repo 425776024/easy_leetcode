@@ -1,5 +1,8 @@
 # L 125 Valid Palindrome
- 
+
+
+[https://www.bilibili.com/video/BV12z4y1R7ZR](https://www.bilibili.com/video/BV12z4y1R7ZR)
+
 --- 
  
 ``` 

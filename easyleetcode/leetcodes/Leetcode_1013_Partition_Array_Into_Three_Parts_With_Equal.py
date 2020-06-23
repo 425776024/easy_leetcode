@@ -1,0 +1,1 @@
+print('Leetcode_1013_Partition_Array_Into_Three_Parts_With_Equal')

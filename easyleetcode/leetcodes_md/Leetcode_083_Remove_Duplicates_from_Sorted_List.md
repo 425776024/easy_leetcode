@@ -1,5 +1,7 @@
 # L 083 Remove Duplicates from Sorted List
- 
+
+[https://www.bilibili.com/video/BV1eK411p7V5](https://www.bilibili.com/video/BV1eK411p7V5)
+
 --- 
  
 ``` 

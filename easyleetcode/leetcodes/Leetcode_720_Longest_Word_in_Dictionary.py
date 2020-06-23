@@ -1,0 +1,1 @@
+print('Leetcode_720_Longest_Word_in_Dictionary')

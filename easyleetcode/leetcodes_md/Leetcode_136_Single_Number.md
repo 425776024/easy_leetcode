@@ -1,5 +1,7 @@
 # L 136 Single Number
- 
+
+[https://www.bilibili.com/video/BV1Hk4y1677X](https://www.bilibili.com/video/BV1Hk4y1677X)
+
 --- 
 
 

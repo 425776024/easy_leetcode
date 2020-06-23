@@ -1,0 +1,1 @@
+print('Leetcode_1429_First_Unique_Number')

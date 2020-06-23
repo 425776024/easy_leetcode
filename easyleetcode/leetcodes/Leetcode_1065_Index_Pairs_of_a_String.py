@@ -1,0 +1,1 @@
+print('Leetcode_1065_Index_Pairs_of_a_String')

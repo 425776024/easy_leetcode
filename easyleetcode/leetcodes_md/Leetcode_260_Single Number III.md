@@ -1,5 +1,7 @@
 # Leetcode_260_Single Number III
 
+[https://www.bilibili.com/video/BV1Xp4y1Q7Wb](https://www.bilibili.com/video/BV1Xp4y1Q7Wb)
+
 ---
 
 ```

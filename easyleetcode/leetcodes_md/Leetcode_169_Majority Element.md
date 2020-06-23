@@ -1,5 +1,7 @@
 # Leetcode_169_Majority Element
 
+[https://www.bilibili.com/video/BV1bz4y1d7B5](https://www.bilibili.com/video/BV1bz4y1d7B5)
+
 ---
 
 ```
