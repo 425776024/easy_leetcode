@@ -17,12 +17,11 @@ Return a deep copy of the list.
 容易混淆的地方在于原链表中的随机指针指向的是原链表中的节点，深拷贝则要求将随机指针指向新链表中的节点。
 
 
-
-这道链表的深度拷贝题的难点就在于如何处理随机指针的问题，由于每一个节点都有一个随机指针，
-这个指针可以为空，也可以指向链表的任意一个节点，
-如果在每生成一个新节点给其随机指针赋值时，都要去遍历原链表的话，OJ 上肯定会超时，
-所以可以考虑用 HashMap 来缩短查找时间，第一遍遍历生成所有新节点时同时建立一个原节点和新节点的 
-HashMap，
-第二遍给随机指针赋值时，查找时间是常数级。
+根据 next 指针新建链表
+维护新旧节点的映射关系
+拷贝旧链表中的 random 指针
+更新新链表中的 random 指针
 
 ---
+
+![](https://raw.githubusercontent.com/billryan/algorithm-exercise/master/shared-files/images/copy_list_with_random_pointer.jpg)

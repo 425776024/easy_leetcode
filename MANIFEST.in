@@ -1,0 +1,13 @@
+include easyleetcode/web/*.py
+graft easyleetcode/web/static
+graft easyleetcode/web/templates
+graft easyleetcode/web/codemirror_python
+graft easyleetcode/web/Skulpt
+
+include easyleetcode/*.py
+include easyleetcode/leetcodes/*.py
+include easyleetcode/leetcodes_md/*.md
+include easyleetcode/leetcodes_youtube/*.txt
+include easyleetcode/leetcodes_b/*.txt
+include easyleetcode/logs/*.txt
+include imgs/*.png

@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
     <title>Document</title>
     <link rel="stylesheet" href="/python_static/codemirror/lib/codemirror.css">
     <link rel="stylesheet" href="/python_static/codemirror/addon/fold/foldgutter.css">
@@ -29,14 +29,15 @@
 </div>
 
 <div align="center">
-    <form action="" align="left">
+    <form action="" align="left" style="margin:10px">
         <textarea id="editor" class="editor">{[data['code_str']]}</textarea>
     </form>
+    <button id="run_btn">Run Code</button>
+    <button id="save_btn">Save Code</button>
     <pre id="output"></pre>
     <!-- If you want turtle graphics include a canvas -->
     <div id="mycanvas"></div>
-    <button id="run_btn">Run Code</button>
-    <button id="save_btn">Save Code</button>
+
     <p id="md_v" style="display:none">{[data['code_md_str']]}</p>
     <div id="show-area" class="clearfix" align="left"></div>
     <button id="edit_md">Edit Markdown</button>
@@ -229,6 +230,7 @@
         border: 1px solid #009688;
         background-color: #009688;
     }
+
 
 
 

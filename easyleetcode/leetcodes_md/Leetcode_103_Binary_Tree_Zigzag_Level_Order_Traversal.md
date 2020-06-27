@@ -3,40 +3,29 @@
 --- 
  
 ``` 
-# Definition for a binary tree node.
-# class TreeNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+Given a binary tree, return the zigzag level order traversal of its nodes' values.
+(ie, from left to right, then right to left for the next level and alternate between).
 
-class Solution(object):
-    def zigzagLevelOrder(self, root):
-        """
-        :type root: TreeNode
-        :rtype: List[List[int]]
-        """
-        # level order
-        if root is None:
-            return []
-        q = [[root]]
-        for level in q:
-            record = []
-            for node in level:
-                if node.left:
-                    record.append(node.left)
-                if node.right:
-                    record.append(node.right)
-            if record:
-                q.append(record)
-        # zigzag order
-        res = []
-        for index, level in enumerate(q):
-            temp = [x.val for x in level]
-            if index % 2 == 0:
-                res.append(temp)
-            else:
-                res.append(temp[::-1])
-        return res
+Example
+Given binary tree {3,9,20,#,#,15,7},
 
+    3
+   / \
+  9  20
+    /  \
+   15   7
+
+
+return its zigzag level order traversal as:
+
+[
+  [3],
+  [20,9],
+  [15,7]
+]
+
+二叉树的之字形层序遍历
+二叉树的之字形层序遍历是之前那道 Binary Tree Level Order Traversal 的变形，不同之处在于一行是从左到右遍历，
+下一行是从右往左遍历，交叉往返的之字形的层序遍历。最简单直接的方法就是利用层序遍历，
+并使用一个变量 cnt 来统计当前的层数（从0开始），将所有的奇数层的结点值进行翻转一下即可
  ```

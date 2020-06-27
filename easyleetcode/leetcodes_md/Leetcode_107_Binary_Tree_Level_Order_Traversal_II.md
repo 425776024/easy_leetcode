@@ -3,51 +3,27 @@
 --- 
  
 ``` 
-# Definition for a binary tree node.
-# class TreeNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
 
-class Solution(object):
-    # def levelOrderBottom(self, root):
-    #     """
-    #     :type root: TreeNode
-    #     :rtype: List[List[int]]
-    #     """
-    #     res = []
-    #     if root is None:
-    #         return []
-    #     self.get_level(res, root, 0)
-    #     # reverse result
-    #     res.reverse()
-    #     return res
-    #
-    # def get_level(self, res, root, depth):
-    #     if root is None:
-    #         return
-    #     if depth == len(res):
-    #         res.append([])
-    #     res[depth].append(root.val)
-    #     self.get_level(res, root.left, depth + 1)
-    #     self.get_level(res, root.right, depth + 1)
-    def levelOrderBottom(self, root):
-        if root is None:
-            return []
-        # use stack
-        stack = [[root]]
-        res = []
-        while len(stack) > 0:
-            top = stack.pop()
-            res.insert(0, [t.val for t in top])
-            temp = []
-            for node in top:
-                if node.left is not None:
-                    temp.append(node.left)
-                if node.right is not None:
-                    temp.append(node.right)
-            if len(temp) > 0:
-                stack.append(temp)
-        return res
+Given a binary tree, return the bottom-up level order traversal of its nodes' values.
+(ie, from left to right, level by level from leaf to root).
+
+Example
+Given binary tree {3,9,20,#,#,15,7},
+
+    3
+   / \
+  9  20
+    /  \
+   15   7
+
+
+return its bottom-up level order traversal as:
+[
+  [15,7],
+  [9,20],
+  [3]
+]
+
  ```
+
+- 在普通的 BFS 基础上增加了逆序输出，简单的实现可以使用辅助栈或者最后对结果逆序

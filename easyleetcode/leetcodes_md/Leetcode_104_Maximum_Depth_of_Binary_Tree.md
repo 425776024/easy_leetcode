@@ -3,23 +3,22 @@
 --- 
  
 ``` 
-# Definition for a  binary tree node
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+Given a binary tree, find its maximum depth.
 
-class Solution:
-    def maxDepth(self, root):
-        """
-        :type root: TreeNode
-        :rtype: int
-        """
-        if root is None:
-            return 0
-        ld = self.maxDepth(root.left)
-        rd = self.maxDepth(root.right)
-        return 1 + max(ld, rd)
+The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+
+Example
+Given a binary tree as follow:
+
+  1
+ / \
+2   3
+   / \
+  4   5
+copy
+The maximum depth is 3.
 
  ```
+
+- 1.递归
+- 2.迭代，stack or queue

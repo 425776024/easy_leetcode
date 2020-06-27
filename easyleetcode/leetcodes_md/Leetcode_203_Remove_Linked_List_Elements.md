@@ -2,31 +2,12 @@
  
 --- 
  
-``` 
-# Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
+```
+Problem Statement
+Remove all elements from a linked list of integers that have value val.
 
-class Solution(object):
-    def removeElements(self, head, val):
-        """
-        :type head: ListNode
-        :type val: int
-        :rtype: ListNode
-        """
-        # add a extra head for removing head
-        prehead = ListNode(-1)
-        prehead.next = head
-        last, pos = prehead, head
-        while pos is not None:
-            if pos.val == val:
-                last.next = pos.next
-            else:
-                last = pos
-            pos = pos.next
-        return prehead.next
+Example
+Given 1->2->3->3->4->5->3, val = 3, you should return the list as 1->2->4->5
 
 
  ```

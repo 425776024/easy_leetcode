@@ -1,23 +1,18 @@
-# Definition for a binary tree node.
-# class TreeNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+class TreeNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
+
 
 class Solution(object):
     def isBalanced(self, root):
-        """
-        :type root: TreeNode
-        :rtype: bool
-        """
-        # Bottom-up recursion with sentinel -1
         if root is None:
             return True
-        if self.getDepth(root) < 0:
+        if self.getDepth(root) == False:
             return False
         return True
-    
+
     def getDepth(self, node):
         if node is None:
             return 1
@@ -27,26 +22,23 @@ class Solution(object):
         rd = self.getDepth(node.right)
         if rd < 0:
             return -1
+        # 任一节点下，左右子数深度相差超过1，不是平衡树
         elif abs(ld - rd) > 1:
-            return -1
+            return False
         else:
             return max(ld, rd) + 1
-    
-
-    # https://discuss.leetcode.com/topic/7798/the-bottom-up-o-n-solution-would-be-better
-    # def isBalanced(self, root):
-    #     # Top-down recursion
-    #     if root is None:
-    #         return True
-    #     left = self.depth(root.left)
-    #     right = self.depth(root.right)
-    #     return abs(left - right) <= 1 and self.isBalanced(root.left) and self.isBalanced(root.right)
-
-    # def depth(self, root):
-    #     if root is None:
-    #         return 0
-    #     return max(self.depth(root.left), self.depth(root.right)) + 1
-        
 
 
+n1 = TreeNode(3)
+n2 = TreeNode(9)
+n3 = TreeNode(20)
+n4 = TreeNode(15)
+n5 = TreeNode(17)
 
+n1.left = n2
+n1.right = n3
+
+n3.left = n4
+n3.right = n5
+
+print(Solution().isBalanced(n1))
