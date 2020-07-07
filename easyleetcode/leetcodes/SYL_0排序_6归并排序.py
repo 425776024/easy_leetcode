@@ -28,7 +28,7 @@ def merge_sort(lists):
     right = merge_sort(lists[middle:])  # 右边部分并归排序(排好序了）
     return merge(left, right)  # 合并左边和右边的排序
 
-
+print('<iframe src="//player.bilibili.com/player.html?aid=413831228&bvid=BV1oV41167Dk&cid=209717889&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>')
 if __name__ == '__main__':
     a = [14, 2, 34, 43, 21, 19]
     print(merge_sort(a))

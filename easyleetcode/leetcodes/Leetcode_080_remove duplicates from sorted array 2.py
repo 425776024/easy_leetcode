@@ -1,4 +1,3 @@
-
 class Solution:
     def call(self, nums, dupsize=2):
         j = 0  # 新的满足要求的数组索引
@@ -20,6 +19,7 @@ class Solution:
 
         return nums[:j]
 
+print('<iframe src="//player.bilibili.com/player.html?aid=883753683&bvid=BV1BK4y1s7gj&cid=209616974&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>')
 
 s = Solution()
-print(s.call([1, 1, 1, 1, 1, 4, 4, 2, 2, 2, 3], 3))
+print(s.call([1, 1, 1, 1, 1, 4, 4, 2, 2, 2, 3], 2))

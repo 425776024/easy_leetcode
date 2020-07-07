@@ -1,10 +1,9 @@
 def countAndSay(n):
     if n == 0:
         return ''
-    res = '2'
+    res = '3'
     while n != 0:
         n -= 1
-        print(res)
         i = 0
         count = 1
         cur = ''
@@ -20,7 +19,8 @@ def countAndSay(n):
             # 到下一个数字位
             i += 1
         res = cur
+        print(res)
     return res
 
-
+print('<iframe src="//player.bilibili.com/player.html?aid=328784792&bvid=BV1WA411e7Cy&cid=209612236&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>')
 s = countAndSay(6)

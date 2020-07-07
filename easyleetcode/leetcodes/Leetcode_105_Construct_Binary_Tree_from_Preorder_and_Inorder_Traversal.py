@@ -1,5 +1,4 @@
 
-
 class TreeNode(object):
     def __init__(self, x):
         self.val = x
@@ -34,11 +33,13 @@ class Solution(object):
     def buildTree2(self, preorder, inorder):
         if not preorder:
             return None
-
+        # preorder：根左右
+        # inorder：左根右
         x = preorder.pop(0)
         node = TreeNode(x)
         i = inorder.index(x)
-
+        # preorder.pop(0) ，此时preorder只剩 左右，:i是左部分
         node.left = self.buildTree2(preorder[:i], inorder[:i])
         node.right = self.buildTree2(preorder[i:], inorder[i + 1:])
         return node
+

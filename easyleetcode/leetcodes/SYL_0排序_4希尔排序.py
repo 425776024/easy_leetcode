@@ -1,4 +1,3 @@
-
 def shell(data):
     size = len(data)
     # 最初，一半长度的跳跃对比
@@ -13,6 +12,7 @@ def shell(data):
             data[j + jmp] = temp  # 插入点找到，插入数据
         jmp = jmp // 2
 
+print('<iframe src="//player.bilibili.com/player.html?aid=456231292&bvid=BV1B5411Y7m6&cid=207954949&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>')
 if __name__ == '__main__':
     data = [16, 25, 39, 27, 12, 8, 45, 63]
     shell(data)

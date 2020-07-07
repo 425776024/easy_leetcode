@@ -43,7 +43,7 @@ class Solution2:
         # l+1 !!
         return s[l + 1:r]
 
-
+print('<iframe src="//player.bilibili.com/player.html?aid=968696647&bvid=BV1Rp4y1U7ag&cid=208409065&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>')
 if __name__ == '__main__':
     s = Solution()
     # s2 = Solution2()

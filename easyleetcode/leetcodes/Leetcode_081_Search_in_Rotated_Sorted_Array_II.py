@@ -35,6 +35,7 @@ class Solution:
             return True, end
         return False, -1
 
+print('<iframe src="//player.bilibili.com/player.html?aid=498833959&bvid=BV1CK411H7gr&cid=209622589&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>')
 
 # 从小到大的数组被旋转
 # 二分搜索，穷举旋转的时候，mid坐在左、右边情况

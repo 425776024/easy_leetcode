@@ -1,6 +1,4 @@
 
-
-
 class Solution:
     '''
     找到数组中结果与k接近的3个元素
@@ -29,6 +27,7 @@ class Solution:
                     right -= 1
         return ans, res
 
+print('<iframe src="//player.bilibili.com/player.html?aid=626255894&bvid=BV19t4y197WW&cid=209616540&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>')
 
 s = Solution()
 print(s.threeSumClosest([-1, 1, 2, -4, -1], 1))

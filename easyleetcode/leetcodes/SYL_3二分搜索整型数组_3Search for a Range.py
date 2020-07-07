@@ -1,4 +1,3 @@
-
 class Solution:
     """
     @param A : a list of integers
@@ -42,7 +41,8 @@ class Solution:
 
         return ret
 
+print('<iframe src="//player.bilibili.com/player.html?aid=626259828&bvid=BV1dt4y197MW&cid=209618300&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>')
 
 if __name__ == '__main__':
     s = Solution()
-    print(s.searchRange([5, 7, 7, 8, 8, 10], 8))
+    print(s.searchRange([5, 7, 7, 8,8,8,8, 8, 10], 8))

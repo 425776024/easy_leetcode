@@ -37,7 +37,7 @@ class Solution2:
                 return False
         return True
 
-
+print('<iframe src="//player.bilibili.com/player.html?aid=626179101&bvid=BV1zt4y197rm&cid=208408787&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>')
 if __name__ == '__main__':
     s1 = Solution2()
     print(s1.isPalindrome('    A 2man, a plan, a can  al:   Panam2a   '))

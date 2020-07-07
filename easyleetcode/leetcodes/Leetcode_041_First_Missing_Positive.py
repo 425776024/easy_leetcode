@@ -1,6 +1,4 @@
 
-
-
 class Solution:
     def firstMissingPositive(self, nums):
         n = len(nums)
@@ -17,12 +15,9 @@ class Solution:
                 return i + 1
         return n + 1
 
+print('<iframe src="//player.bilibili.com/player.html?aid=626322347&bvid=BV1Yt4y1Q7Vh&cid=209615471&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>')
 
 s = Solution()
-# [3, 4, -1, 1]
-# [-1, 4, 3, 1]
-# [-1, 1, 3, 4]
-# [-1, 1, 3, 4]
-# [1, -1, 3, 4]
+
 print(s.firstMissingPositive([3, 4, -1, 1]))
 print(s.firstMissingPositive([7, 8, 9, 11, 12]))

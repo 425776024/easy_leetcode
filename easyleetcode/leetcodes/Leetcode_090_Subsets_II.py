@@ -1,35 +1,13 @@
-class Solution(object):
-    # def subsetsWithDup(self, nums):
-    #     """
-    #     :type nums: List[int]
-    #     :rtype: List[List[int]]
-    #     """
-    #     nums.sort()
-    #     res = []
-    #     for i in range(1 << len(nums)):
-    #         res.append(self.get_subsets(nums, i))
-    #     # remove duplicate
-    #     final_res = {}
-    #     for subset in res:
-    #         hash_key = ''.join([str(t) for t in subset])
-    #         try:
-    #             final_res[hash_key]
-    #         except:
-    #             final_res[hash_key] = subset
-    #     return final_res.values()
-    #
-    # def get_subsets(self, nums, magic):
-    #     res = []
-    #     for i in range(len(nums)):
-    #         if (1 << i) & magic != 0:
-    #             res.append(nums[i])
-    #     return res
 
+
+class Solution(object):
     def subsetsWithDup(self, nums):
         nums.sort()
         res = [[]]
         begin = 0
         for index in range(len(nums)):
+            # 如果不是（和前一位）重复，就和之前一样从0开始生成
+            # 否则，只从前一位生成的元素开始
             if index == 0 or nums[index] != nums[index - 1]:
                 # generate all
                 begin = 0
@@ -42,3 +20,8 @@ class Solution(object):
             # avoid duplicate subsets
             begin = size
         return res
+
+
+if __name__ == "__main__":
+    s = Solution()
+    print(s.subsetsWithDup([1, 2, 2]))

@@ -1,4 +1,3 @@
-
 class Solution:
     def strStr(self, source, target):
         if source is None or target is None:
@@ -13,7 +12,7 @@ class Solution:
                 return i
         return -1
 
-
+print('<iframe src="//player.bilibili.com/player.html?aid=668711105&bvid=BV1ja4y1e72S&cid=208093784&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>')
 if __name__ == '__main__':
     s = Solution()
     # 在acdbcdbdse中，找到第一次出现dbd的地方

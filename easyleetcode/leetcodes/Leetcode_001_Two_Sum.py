@@ -24,8 +24,8 @@ class Solution(object):
 def run():
     s = Solution()
     print(s.twoSum2([3, 2, 4], 6))
-    print('hello')
 
+print('<iframe src="//player.bilibili.com/player.html?aid=841273273&bvid=BV1f54y1i7zg&cid=209615722&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>')
 
 if __name__ == '__main__':
     run()

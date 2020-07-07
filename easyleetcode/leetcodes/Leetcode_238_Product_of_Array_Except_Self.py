@@ -12,3 +12,6 @@ class Solution(object):
             ans[i] *= right
             right *= nums[i]
         return ans
+
+
+print('<iframe src="//player.bilibili.com/player.html?aid=841253292&bvid=BV1N54y1q77u&cid=209614267&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>')

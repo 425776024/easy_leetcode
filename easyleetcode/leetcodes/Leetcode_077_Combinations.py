@@ -1,43 +1,26 @@
-class Solution(object):
-    # def combine(self, n, k):
-    #     """
-    #     :type n: int
-    #     :type k: int
-    #     :rtype: List[List[int]]
-    #     """
-    #     res = []
-    #     candidates = range(1, n + 1)
-    #     self.get_combine(res, candidates, [], k, 0)
-    #     return res
-    #
-    # def get_combine(self, res, candidates, prefix, k, start):
-    #     # recursive
-    #     if k == 0:
-    #         res.append(prefix)
-    #     for index in range(start, len(candidates)):
-    #         self.get_combine(res, candidates,
-    #                          prefix + [candidates[index]],
-    #                          k - 1, index + 1)
 
+class Solution:
     def combine(self, n, k):
+        # 先把不符合条件的情况去掉
+        if n <= 0 or k <= 0 or k > n:
+            return []
         res = []
-        self.get_combine(res, [], n, k, 1)
+        self.__dfs(1, k, n, [], res)
         return res
 
-    def get_combine(self, res, prefix, n, k, start):
-        # recursive with only one array
-        if k == 0:
-            res.append(list(prefix))
-        elif start <= n:
-            prefix.append(start)
-            self.get_combine(res, prefix,
-                             n, k - 1, start + 1)
-            prefix.pop()
-            self.get_combine(res, prefix,
-                             n, k, start + 1)
+    def __dfs(self, start, k, n, pre, res):
+        # 当前已经找到的组合存储在 pre 中，需要从 start 开始搜索新的元素
+        # 在第 k 层结算
+        if len(pre) == k:
+            res.append(pre[:])
+            return
+
+        for i in range(start, n + 1):
+            pre.append(i)
+            # 因为已经把 i 加入到 pre 中，下一轮就从 i + 1 开始
+            self.__dfs(i + 1, k, n, pre, res)
+            # 回溯的时候，状态重置
+            pre.pop()
 
 
-
-if __name__ == "__main__":
-    s = Solution()
-    print s.combine(4, 2)
+print(Solution().combine(n=4, k=2))

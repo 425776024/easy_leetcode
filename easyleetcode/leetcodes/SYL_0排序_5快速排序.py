@@ -1,4 +1,3 @@
-
 def Partion(arr, left, right):
     # 一次对比操作，返回中间索引（索引前面比他小，后面比他大）
     tag = right # 作为判断点，一轮后，比他小的会到他前面，比他大的在他后面
@@ -28,7 +27,7 @@ def quickSort(arr):
         if center_i + 1 < pos[1]:
             stack.append([center_i + 1, pos[1]])
 
-
+print('<iframe src="//player.bilibili.com/player.html?aid=711186364&bvid=BV1eD4y1Q7mW&cid=207955779&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>')
 if __name__ == '__main__':
     data = [16, 25, 39, 27, 12, 8, 45, 63]
     quickSort(data)

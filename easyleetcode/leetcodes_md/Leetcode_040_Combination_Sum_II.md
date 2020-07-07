@@ -2,37 +2,27 @@
  
 --- 
  
-``` 
-class Solution(object):
-    def combinationSum2(self, candidates, target):
-        """
-        :type candidates: List[int]
-        :type target: int
-        :rtype: List[List[int]]
-        """
-        candidates.sort()
-        dp = [[] for _ in range(target + 1)]
-        dp[0].append([])
-        for i in range(1, target + 1):
-            for j in range(len(candidates)):
-                if candidates[j] > i:
-                    break
-                for k in range(len(dp[i - candidates[j]])):
-                    temp = dp[i - candidates[j]][k][:]
-                    # check if this number is used
-                    if len(temp) > 0 and temp[-1] >= j:
-                        continue
-                    # store index
-                    temp.append(j)
-                    dp[i].append(temp)
-        res = []
-        check = {}
-        for temp in dp[target]:
-            value = [candidates[t] for t in temp]
-            try:
-                check[str(value)] += 1
-            except KeyError:
-                check[str(value)] = 1
-                res.append(value)
-        return res
+Given a collection of candidate numbers (C) and a target number (T),
+find all unique combinations in C where the candidate numbers sums to T.
+Each number in C may only be used once in the combination.
+
+Have you met this question in a real interview? Yes
+Example
+For example, given candidate set 10,1,6,7,2,1,5 and target 8,
+
+A solution set is:
+
+[1,7]
+
+[1,2,5]
+
+[2,6]
+
+[1,1,6]
+
+Note
+All numbers (including target) will be positive integers.
+Elements in a combination (a1, a2, … , ak) must be in non-descending order.
+(ie, a1 ≤ a2 ≤ … ≤ ak).
+The solution set must not contain duplicate combinations.
  ```

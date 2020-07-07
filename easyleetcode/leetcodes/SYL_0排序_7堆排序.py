@@ -36,7 +36,7 @@ def adjustHeap(array, i, length):
     # 此时i是空位，i上层的都比temp大，temp放到这里
     array[i] = temp
 
-
+print('<iframe src="//player.bilibili.com/player.html?aid=328695051&bvid=BV1qA411i7pb&cid=207978874&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>')
 if __name__ == '__main__':
     data = [16, 25, 39, 27, 12, 8, 45, -10, 63]
     print('arr', data)

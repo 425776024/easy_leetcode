@@ -1,7 +1,7 @@
-# SYL_6链表_15Binary_Tree_Serialization
-
+# SYL_6二叉树_2Binary_Tree_Serialization
 
 ```
+
 Design an algorithm and write code to serialize and deserialize a binary tree.
 Writing the tree to a file is called 'serialization'
 and reading back from the file to reconstruct
@@ -23,7 +23,6 @@ This is just for when you got wrong answer and want to debug the input.
 
 You can use other method to do serializaiton and deserialization.
 
-```
 
-- 1.递归
-- 2.非递归
+
+```

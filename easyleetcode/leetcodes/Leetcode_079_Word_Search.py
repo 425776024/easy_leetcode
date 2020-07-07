@@ -1,39 +1,59 @@
+
+
 class Solution(object):
+    # 定义上下左右四个行走方向
+    directs = [(0, 1), (0, -1), (1, 0), (-1, 0)]
+
     def exist(self, board, word):
         """
         :type board: List[List[str]]
         :type word: str
         :rtype: bool
         """
-        check_board = [[True] * len(board[0]) for _ in range(len(board))]
+        m = len(board)
+        if m == 0:
+            return False
+        n = len(board[0])
+        mark = [[0 for _ in range(n)] for _ in range(m)]
+
         for i in range(len(board)):
             for j in range(len(board[0])):
-                if board[i][j] == word[0] and check_board:
-                    check_board[i][j] = False
-                    res = self.check_exist(check_board, board, word, 1, len(word), i, j)
-                    if res:
+                # 找到起点
+                if board[i][j] == word[0]:
+                    # 将该元素标记为已使用
+                    mark[i][j] = 1
+                    if self.backtrack(i, j, mark, board, word[1:]) == True:
                         return True
-                    check_board[i][j] = True
+                    else:
+                        # 回溯
+                        mark[i][j] = 0
         return False
 
-
-    def check_exist(self, check_board, board, word, index, ls, row, col):
-        if index == ls:
+    def backtrack(self, i, j, mark, board, word):
+        if len(word) == 0:
             return True
-        for temp in [(0, 1),(0, -1),(1, 0),(-1, 0)]:
-            curr_row = row + temp[0]
-            curr_col = col + temp[1]
-            if curr_row >= 0 and curr_row < len(board) and curr_col >= 0 and curr_col < len(board[0]):
-                if check_board[curr_row][curr_col] and board[curr_row][curr_col] == word[index]:
-                    check_board[curr_row][curr_col] = False
-                    res = self.check_exist(check_board, board, word, index + 1, len(word), curr_row, curr_col)
-                    if res:
-                        return res
-                    check_board[curr_row][curr_col] = True
-        return False
+        # 四个方向的深度优先遍历
+        for direct in self.directs:
+            cur_i = i + direct[0]
+            cur_j = j + direct[1]
 
+            if cur_i >= 0 and cur_i < len(board) and cur_j >= 0 and cur_j < len(board[0]) \
+                    and board[cur_i][cur_j] == word[0]:
+                # 如果是已经使用过的元素，忽略
+                if mark[cur_i][cur_j] == 1:
+                    continue
+                # 将该元素标记为已使用
+                mark[cur_i][cur_j] = 1
+                if self.backtrack(cur_i, cur_j, mark, board, word[1:]) == True:
+                    return True
+                else:
+                    # 回溯
+                    mark[cur_i][cur_j] = 0
+        return False
 
 
 if __name__ == "__main__":
     s = Solution()
-    print s.exist(["aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaab"], "baaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+    print(s.exist(["ABCE", "SFCS", "ADEE"], 'ABCCED'))
+    print(s.exist(["ABCE", "SFCS", "ADEE"], 'SEE'))
+    print(s.exist(["ABCE", "SFCS", "ADEE"], 'ABCB'))

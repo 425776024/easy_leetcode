@@ -21,6 +21,7 @@ class Solution:
         mid = l if A[l] > A[r] else r
         return mid
 
+print('<iframe src="//player.bilibili.com/player.html?aid=796280508&bvid=BV1MC4y1h7BR&cid=209622032&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>')
 
 s = Solution()
-print(s.findPeak([4, 5, 1, 2, 3]))
+print(s.findPeak([4, 5, 3,2,1]))

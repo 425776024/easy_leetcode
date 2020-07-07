@@ -1,4 +1,3 @@
-
 class Solution:
     def str(self, s):
         if len(s) == 0:
@@ -23,7 +22,7 @@ class Solution:
         s += temp[i]
         return s
 
-
+print('<iframe src="//player.bilibili.com/player.html?aid=968657583&bvid=BV1rp4y1U7zY&cid=208408573&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>')
 if __name__ == '__main__':
     s = '     the     sky    is   blue'
     # 单词反转，如果多个空格，整理成正常形式

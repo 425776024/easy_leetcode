@@ -15,7 +15,7 @@ class Solution:
                 tp[b] -= 1
         return True
 
-
+print('<iframe src="//player.bilibili.com/player.html?aid=841169118&bvid=BV1E54y1z7DX&cid=208094419&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>')
 if __name__ == '__main__':
     s = Solution()
     # absje是否是aabbshdjee的子集

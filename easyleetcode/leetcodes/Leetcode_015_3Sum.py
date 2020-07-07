@@ -1,5 +1,3 @@
-
-
 class Solution:
     def call(self, nums, target):
         '''
@@ -39,6 +37,7 @@ class Solution:
                         result.append(ss)
         return result
 
+print('<iframe src="//player.bilibili.com/player.html?aid=926260885&bvid=BV1QT4y177xq&cid=209616375&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>')
 
 s = Solution()
 print(s.call2([-1, 0, 1, 2, -1, -4], -1))

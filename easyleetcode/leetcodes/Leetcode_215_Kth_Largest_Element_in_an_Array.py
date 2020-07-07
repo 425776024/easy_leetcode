@@ -1,4 +1,3 @@
-
 class Solution:
     def call(self, nums, k):
         if nums == None or len(nums) == 0:
@@ -34,6 +33,7 @@ class Solution:
         else:  # 小于k时，第k大在右边
             return self.qsort(nums, m + 1, u, k)
 
+print('<iframe src="//player.bilibili.com/player.html?aid=201251091&bvid=BV13z411v735&cid=209617168&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>')
 
 s = Solution()
 print(s.call([6, 7, 9, 3, 2, 4, 8], 4))

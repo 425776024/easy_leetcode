@@ -3,57 +3,27 @@
 --- 
  
 ``` 
-class Solution(object):
-    # def combinationSum(self, candidates, target):
-    #     """
-    #     :type candidates: List[int]
-    #     :type target: int
-    #     :rtype: List[List[int]]
-    #     """
-    #     candidates.sort()
-    #     return self.getcombinationSum(candidates, [], 0, target)
-    #
-    #
-    # def getcombinationSum(self, candidates, prefix, curr, target):
-    #     if len(prefix) == 0:
-    #         max_value = candidates[0]
-    #     else:
-    #         max_value = prefix[-1]
-    #     res = []
-    #     for i in range(len(candidates)):
-    #         if candidates[i] >= max_value:
-    #             if curr + candidates[i] == target:
-    #                 res.append(prefix+[candidates[i]])
-    #             elif curr + candidates[i] < target:
-    #                 res.extend(self.getcombinationSum(candidates, prefix+[candidates[i]], curr + candidates[i], target))
-    #             else:
-    #                 pass
-    #     return res
+
+Given a set of candidate numbers (C) and a target number (T),
+find all unique combinations in C where the candidate numbers sums to T.
+The same repeated number may be chosen from C unlimited number of times.
+
+For example, given candidate set 2,3,6,7 and target 7,
+A solution set is:
+[7]
+[2, 2, 3]
 
 
-    def combinationSum(self, candidates, target):
-        candidates.sort()
-        dp = [[] for _ in range(target + 1)]
-        dp[0].append([])
-        for i in range(1, target + 1):
-            for j in range(len(candidates)):
-                if candidates[j] > i:
-                    break
-                for k in range(len(dp[i - candidates[j]])):
-                    temp = dp[i - candidates[j]][k][:]
-                    if len(temp) > 0 and temp[-1] > candidates[j]:
-                        continue
-                    temp.append(candidates[j])
-                    dp[i].append(temp)
-        return dp[target]
+Note
+- All numbers (including target) will be positive integers.
+- Elements in a combination (a1, a2, … , ak) must be in non-descending order.
+(ie, a1 ≤ a2 ≤ … ≤ ak).
+- The solution set must not contain duplicate combinations.
 
+给定一个候选数字的集合 candidates 和一个目标值 target. 找到 candidates 中所有的和为 target 的组合.
+在同一个组合中, candidates 中的某个数字不限次数地出现
 
-if __name__ == '__main__':
-    s = Solution()
-    print s.combinationSum([8,7,4,3], 11)
-
-
-
-
+和 Permutations 十分类似，区别在于剪枝函数不同。这里允许一个元素被多次使用，故递归时传入的索引值不自增，而是由 for 循环改变
 
  ```
+![](https://pic.leetcode-cn.com/ade93b4f0678b2b1385ad1362ff426ce0a5a800a5b0ae07dfb65f58677374559-39-3.png)
