@@ -27,15 +27,15 @@ use it, from source code : **clone source** then:
 ## Introduction
 
 
-- Hello Python 程序员//Hello Python programmer
-- 你可以用它//You can use it
-- 成为轻松刷Leetcode的大神//Become the God of leetcode
-- 你可以用它//You can use it
-- 在线运行或添加你的任意Python代码//Run or add your arbitrary Python code online
-- 你可以用它//You can use it
-- 给你的任意Python代码做Markdwon笔记//Take markdwon notes for any Python code you want
-- 它运行非常流畅//It runs very smoothly
-- 你可以把它当做代码笔记包 // You can use it as leetcode study package
+- Hello Python programmer
+- You can use it
+- Become the God of leetcode
+- You can use it
+- Run or add your arbitrary Python code online
+- You can use it
+- Take markdwon notes for any Python code you want
+- It runs very smoothly
+- You can use it as leetcode study package
 
 
 ---

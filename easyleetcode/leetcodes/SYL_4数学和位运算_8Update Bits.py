@@ -23,7 +23,7 @@ def updateBits(n, m, i, j):
 '''
 0b10000000000
     0b10101
-      i   j
+      j   i
 0b10001010100
 '''
 
@@ -37,5 +37,5 @@ if __name__=='__main__':
 	print(' '*5,'i',' '*1,'j')
 
 	s=updateBits(*a)
-	print(bin(s[1]))
 	print(bin(s[0]))
+	print(bin(s[1]))

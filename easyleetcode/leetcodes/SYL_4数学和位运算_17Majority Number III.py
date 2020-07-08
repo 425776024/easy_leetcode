@@ -1,4 +1,3 @@
-
 from copy import deepcopy
 
 
@@ -20,7 +19,7 @@ class Solution:
                 self.clean(d)
         return majority
 
-    def clean(self, d: dict):
+    def clean(self, d):
         max_v = 0
         for v in d.values():
             if v > max_v:

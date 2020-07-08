@@ -38,4 +38,4 @@ class Solution:
 
 
 s = Solution()
-print(s.majorityElement([1, 2, 1, 2, 1, 3, 3]))
+print(s.majorityElement([1, 2, 1, 2, 1, 3,3, 3]))

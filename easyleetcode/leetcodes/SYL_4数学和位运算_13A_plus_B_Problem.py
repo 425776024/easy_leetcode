@@ -1,10 +1,7 @@
-
-
 class Solution:
     def aplusb(self, a, b):
         result = a ^ b
-        carry = a & b
-        carry <<= 1
+        carry = (a & b)<<1
         if carry != 0:
             result = self.aplusb(result, carry)
 
