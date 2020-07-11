@@ -33,7 +33,7 @@ class Solution:
         dummy.next = head
         # 指到m-1点
         node = dummy
-        for i in range(1, m):
+        for i in range(m-1):
             if node == None:
                 return None
             else:

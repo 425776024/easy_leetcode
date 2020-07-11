@@ -57,7 +57,7 @@ class Solution:
             node = ListNode(1)
             pre.next = node
 
-        return sumlist
+        return sumlist.next
 
 
 s = Solution()
@@ -71,5 +71,5 @@ print_list(head2)
 print()
 
 # res_sum.next ? 不需要头节点的伪值
-res_sum = s.two_list_sum(head1, head2).next
+res_sum = s.two_list_sum(head1, head2)
 print_list(res_sum)

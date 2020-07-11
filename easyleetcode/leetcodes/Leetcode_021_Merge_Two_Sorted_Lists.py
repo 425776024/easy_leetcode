@@ -53,5 +53,3 @@ print_list(l2)
 
 res=s.mergeTwoLists(l1,l2)
 print_list(res)
-
-

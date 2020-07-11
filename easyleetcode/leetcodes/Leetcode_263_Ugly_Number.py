@@ -1,7 +1,6 @@
 
-
 class Solution:
-    def kthPrimeNumber(self, k: int):
+    def kthPrimeNumber(self, k):
         if k <= 0:
             return -1
         count = 0
@@ -10,7 +9,7 @@ class Solution:
             num += 1
             if self.isUgly(num):
                 count += 1
-                # print(num)
+                print(num)
         return num
 
     def isUgly(self, num):

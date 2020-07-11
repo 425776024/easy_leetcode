@@ -1,7 +1,6 @@
 
-
 class Solution:
-    def digitCounts(self, k: int, n: int):
+    def digitCounts(self, k, n):
         count = 0
         kChar = str(k)
         for i in range(n+1):
