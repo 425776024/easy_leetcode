@@ -1,4 +1,3 @@
-
 def make_list(arr):
     head_node = None
     p_node = None
@@ -94,3 +93,4 @@ print_list(head)
 s = Solution()
 copy_head = s.copyRandomList2(head)
 print_list(copy_head)
+print(copy_head.random.label)

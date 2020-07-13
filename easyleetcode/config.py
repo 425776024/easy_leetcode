@@ -27,6 +27,5 @@ templates = Jinja2Templates(directory=os.path.join(web_path, 'templates'))
 
 
 
-python_path = 'python3 '
 count_day = os.path.join(logs_path, 'count_day.txt')
 count_view_code = os.path.join(logs_path, 'count_view_code.txt')

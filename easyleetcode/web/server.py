@@ -63,6 +63,7 @@ async def view_code(request: Request, name: str = '001_Two_Sum'):
         return templates.TemplateResponse("index.html", {"request": request, "message": 'Easy Leetcode'})
     # 代码路径
     code_path = code_name_map[name][1]
+    print(code_path)
     # 代码markdwon路径
     code_md_path = code_name_map[name][2]
     code_str = code_util.get_file_read(code_path)

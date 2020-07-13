@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import os, sys
 
+sys.path.append(os.path.join(os.path.dirname(__file__), '../../'))
 import uvicorn
 from fastapi import FastAPI
 
@@ -36,7 +38,7 @@ def run(host="127.0.0.1", port=8080):
     utils.add_file_txt_count(config.count_day)
     print('_____running:____')
     print('please web browser', 'http://%s:%s' % (str(host), str(port)))
-    uvicorn.run(app=app, host=host, port=port, log_level="error")
+    uvicorn.run(app=app, host=host, port=port)
     # uvicorn.run(app=app, host=host, port=port)
 
 

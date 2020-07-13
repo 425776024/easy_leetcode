@@ -37,7 +37,7 @@ class Solution(object):
             slow = slow.next
             # two step
             fast = fast.next.next
-
+        print(slow.val)
         # 退出while，fast是最后一个节点，或者None,slow 到中间
         last = slow.next
         slow.next = None

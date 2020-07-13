@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from .web.main import run
+from easyleetcode.web.main import run
 
 __author__ = 'Jiang.XinFa'
 
